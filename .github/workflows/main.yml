@@ -1,9 +1,11 @@
-- name: Python Markdown Documentation
+- name: Python Interrogate Check
   # You may pin to the exact commit or the version.
-  # uses: jbheard/markdown-docs@c97b542c3d24257d97d55179445e339251618220
-  uses: jbheard/markdown-docs@v0.1
+  # uses: JackMcKew/python-interrogate-check@b375952bb548087b1c30388fc6393ecff364614a
+  uses: JackMcKew/python-interrogate-check@v0.1.1
   with:
-    # Path to the source folder containing python code
-    src_path: # optional, default is .
-    # Directory to create markdown documents in
-    dst_path: # optional, default is docs
+    # File or directory to run interrogate on.
+    path: 
+    # Fail when coverage % is less than a given amount.
+    fail-under: # optional, default is 80
+    # Generate a `shields.io` status badge (an SVG image) in at a given file or directory.
+    badge-location: # optional, default is .
