@@ -1,0 +1,12 @@
+{
+    "python.linting.pylintEnabled": false,
+    "python.linting.pylamaEnabled": false,
+    "python.linting.flake8Enabled": true,
+    "python.linting.enabled": true,
+    "python.condaPath": "/home/q/anaconda3/bin/activate",
+    "python.formatting.autopep8Args": [
+        "--max-line-len=120"
+    ],
+    "python.terminal.activateEnvInCurrentTerminal": true,
+    "python.pythonPath": "/home/q/anaconda3/envs/d/bin/python"
+}
