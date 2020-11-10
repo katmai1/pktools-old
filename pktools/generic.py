@@ -1,3 +1,4 @@
+import toml
 from time import sleep
 import ccxt
 
@@ -39,3 +40,21 @@ def getPriceCryptoCurrency(pair, exchange="binance", price="last"):
         return None
 
 # ────────────────────────────────────────────────────────────────────────────────
+
+
+def readTOML(filename):
+    """Read TOML file and returns dictionary
+
+    Args:
+        filename (str): Filename path
+
+    Returns:
+        dict: Dictionary generated from file
+    """
+    try:
+        with open(filename, 'r') as f:
+            data = toml.load(f)
+        return data
+    except Exception as e:
+        print(e)
+    return None

@@ -1,7 +1,12 @@
+import requests
+import json
 from discord_webhook import DiscordEmbed, DiscordWebhook
 
 
-def discordWebhook(url, title, message, color='default'):
+# ────────────────────────────────────────────────────────────────────────────────
+
+
+def sendDiscordWebhook(url, title, message, color='default'):
     """Send messages to discord using webhook
 
     Args:
@@ -18,3 +23,20 @@ def discordWebhook(url, title, message, color='default'):
     embed = DiscordEmbed(title=title, description=message, color=color_list[color])
     webhook.add_embed(embed)
     return webhook.execute()
+
+# ────────────────────────────────────────────────────────────────────────────────
+
+
+def sendPushbullet(private_key, title, message):
+    msg = {"type": "note", "title": title, "body": message}
+    TOKEN = private_key
+    resp = requests.post('https://api.pushbullet.com/v2/pushes',
+                         data=json.dumps(msg),
+                         headers={'Authorization': 'Bearer ' + TOKEN,
+                                  'Content-Type': 'application/json'})
+    if resp.status_code != 200:
+        raise Exception('Error', resp.status_code)
+    else:
+        print('Message sent')
+
+# ────────────────────────────────────────────────────────────────────────────────
