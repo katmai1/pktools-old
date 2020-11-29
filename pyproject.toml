@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "pktools"
-version = "0.1.5"
+version = "0.1.6"
 description = ""
 authors = ["katmai <katmai.mobil@gmail.com>"]
 readme = "README.md"
@@ -8,6 +8,7 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "^3.8"
 discord-webhook = "^0.11.0"
+dbus-python = "^1.2.16"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"

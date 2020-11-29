@@ -1,5 +1,7 @@
 import requests
 import json
+from audioplayer import AudioPlayer
+import playsound
 from discord_webhook import DiscordEmbed, DiscordWebhook
 
 
@@ -28,6 +30,16 @@ def sendDiscordWebhook(url, title, message, color='default'):
 
 
 def sendPushbullet(private_key, title, message):
+    """Send notifications to Pushbullet
+
+    Args:
+        private_key (str): Private key of your pushbullet account
+        title (str): Title of notification
+        message (str): Notification content
+
+    Raises:
+        Exception: Raises custom exception
+    """
     msg = {"type": "note", "title": title, "body": message}
     TOKEN = private_key
     resp = requests.post('https://api.pushbullet.com/v2/pushes',
@@ -40,3 +52,8 @@ def sendPushbullet(private_key, title, message):
         print('Message sent')
 
 # ────────────────────────────────────────────────────────────────────────────────
+
+
+def playSoundNotify():
+    AudioPlayer('sounds/default.mp3').play(block=True)
+    # playsound.playsound('default.mp3')
