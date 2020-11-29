@@ -8,5 +8,5 @@
         "--max-line-len=120"
     ],
     "python.terminal.activateEnvInCurrentTerminal": true,
-    "python.pythonPath": "/home/q/anaconda3/envs/d/bin/python"
+    "python.pythonPath": "/home/q/anaconda3/envs/develop/bin/python"
 }

@@ -1,7 +1,6 @@
 import requests
 import json
 from audioplayer import AudioPlayer
-import playsound
 from discord_webhook import DiscordEmbed, DiscordWebhook
 
 

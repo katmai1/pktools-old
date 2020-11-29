@@ -13,8 +13,8 @@ class TestGetPriceCryptoCurrency(unittest.TestCase):
         price = getPriceCryptoCurrency('BTC/US')
         self.assertIs(price, None)
 
-    def test_sounds(self):
-        playSoundNotify()
+    # def test_sounds(self):
+    #     playSoundNotify()
 
 # ────────────────────────────────────────────────────────────────────────────────
 
