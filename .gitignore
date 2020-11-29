@@ -1,3 +1,4 @@
 /.pytest_cache/
 /pktools/__pycache__/
 *.pyc
+/dist/
